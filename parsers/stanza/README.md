@@ -49,7 +49,8 @@ for sentence in doc.sentences:
         feats = word.feats if word.feats else '_'
         conllu_line = f"{word.id}\t{word.text}\t{word.lemma}\t{word.upos}\t_\t{feats}\t{word.head}\t{word.deprel}\t_"
         print(conllu_line)
-    print()```
+    print()
+```
 
 ## Acknowledgements
 The models have been developed as part of the "CAVaL: Classical Armenian Valency Lexicon" project funded by the Deutsche Forschungsgemeinschaft (DFG), project number 518003859.
