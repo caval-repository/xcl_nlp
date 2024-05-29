@@ -54,4 +54,4 @@ for sentence in doc.sentences:
 
 ## Acknowledgements
 The models have been developed as part of the "CAVaL: Classical Armenian Valency Lexicon" project funded by the Deutsche Forschungsgemeinschaft (DFG), project number 518003859.
-We acknowledge the permission of the Arak29 Charitable Foundation (https://arak29.org/) to use the digital editions of Classical Armenian texts for training of the xcl_w2v_vectors.pt model.
+We acknowledge the permission of the Arak29 Charitable Foundation (https://arak29.org/) for a non-commercial use of their digital editions of Classical Armenian texts to train the xcl_w2v_vectors.pt model.
