@@ -45,13 +45,13 @@ set_lang_class("xcl", XclLanguage)
 import spacy
 
 # Load the morphologizer/tagger model
-nlp_morph = spacy.load("parsers/spacy/morphologizer_tagger")
+nlp_morph = spacy.load("parsers/SpaCy/morphologizer_tagger")
 
 # Load the lemmatizer model
-nlp_lemma = spacy.load("parsers/spacy/lemmatizer")
+nlp_lemma = spacy.load("parsers/SpaCy/lemmatizer")
 
 # Load the dependency parser model
-nlp_parser = spacy.load("parsers/spacy/parser")
+nlp_parser = spacy.load("parsers/SpaCy/parser")
 
 # Example text
 text = "Ասաց եւ առակ մի նոցա՝ առ այն թե պարտ է յամենայն ժամ կալ նոցա յաղաւթս. եւ մի ձանձրանալ."
