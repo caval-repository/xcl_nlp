@@ -2,6 +2,8 @@
 
 This repository contains a UDPipe 2 model for Classical Armenian, including a POS tagger, lemmatizer and dependency parser. The model have been trained on the UD_Classical_Armenian-CAVaL treebank (UD v2.14): https://universaldependencies.org/treebanks/xcl_caval/index.html The deployment and use of this model require some computational knowledge and resources and are intended as a research tool rather than a user-friendly, intuitive application.
 
+See a detailed description of the models in [Kharatyan, Kocharov 2024](https://github.com/caval-repository/xcl_nlp/blob/main/Kharatyan_Kocharov_2024_xcl_parsers.pdf).
+
 ## Created by: Lilit Kharatyan, Petr Kocharov
 
 ## License: CC BY-SA 4.0
