@@ -2,6 +2,8 @@
 
 This repository contains SpaCy models for Classical Armenian, including parser, lemmatizer, and morphologizer/tagger. The models have been trained on the UD_Classical_Armenian-CAVaL treebank (UD v2.14): https://universaldependencies.org/treebanks/xcl_caval/index.html.
 
+See a detailed description of the models in [Kharatyan, Kocharov 2024](https://github.com/caval-repository/xcl_nlp/blob/main/Kharatyan_Kocharov_2024_xcl_parsers.pdf).
+
 ## Created by: Lilit Kharatyan, Petr Kocharov
 
 ## License: CC BY-NC-ND 4.0
