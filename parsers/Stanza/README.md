@@ -7,7 +7,7 @@ See a detailed description of the models in [Kharatyan, Kocharov 2024](https://g
 
 ## Created by: Lilit Kharatyan, Petr Kocharov
 
-## License: CC BY-NC-ND 4.0
+## License: CC BY-NC-SA 4.0
 
 ## Models
 
