@@ -1,7 +1,7 @@
 # Stanza Models for Classical Armenian
 
-This directory contains Stanza models for Classical Armenian, including tokenizer, POS tagger, lemmatizer, and dependency parser. 
-The models have been trained on the UD_Classical_Armenian-CAVaL treebank (UD v2.14): https://universaldependencies.org/treebanks/xcl_caval/index.html.
+Stanza already includes official Classical Armenian (xcl) models as part of the library’s parsing models.
+The models have been trained on the UD_Classical_Armenian-CAVaL treebank (UD v2.16): [https://universaldependencies.org/treebanks/xcl_caval/index.html.](https://universaldependencies.org/treebanks/xcl_caval/)
 
 See a detailed description of the models in [Kharatyan, Kocharov 2024](https://github.com/caval-repository/xcl_nlp/blob/main/Kharatyan_Kocharov_2024_xcl_parsers.pdf).
 
@@ -11,11 +11,10 @@ See a detailed description of the models in [Kharatyan, Kocharov 2024](https://g
 
 ## Models
 
-- **Tokenizer**: `xcl_classicalarmenian_tokenizer.pt`
-- **POS Tagger**: `xcl_classicalarmenian_nocharlm_tagger.pt`
-- **Lemmatizer**: `xcl_classicalarmenian_nocharlm_lemmatizer.pt`
-- **Dependency Parser**: `xcl_classicalarmenian_nocharlm_parser.pt`
-- **Pretrained Vectors**: `xcl_w2v_vectors.pt`
+- **Tokenizer** 
+- **POS Tagger**
+- **Lemmatizer**
+- **Dependency Parser**
 
 ## Usage
 
@@ -23,35 +22,14 @@ Load the models in Stanza and use them for processing text as shown in the examp
 
 ```python
 import stanza
+stanza.download("xcl")
+nlp = stanza.Pipeline("xcl")
 
-# Define the paths to the models
-tokenizer_model_path = 'parsers/stanza/xcl_classicalarmenian_tokenizer.pt'
-pos_model_path = 'parsers/stanza/xcl_classicalarmenian_nocharlm_tagger.pt'
-lemma_model_path = 'parsers/stanza/xcl_classicalarmenian_nocharlm_lemmatizer.pt'
-depparse_model_path = 'parsers/stanza/xcl_classicalarmenian_nocharlm_parser.pt'
-pretrain_path = 'parsers/stanza/new_vectors.pt'
+doc = nlp("Your text")
+for sent in doc.sentences:
+    for w in sent.words:
+        print(w.id, w.text, w.lemma, w.upos, w.head, w.deprel)
 
-# Initialize the pipeline
-nlp = stanza.Pipeline(lang='hy', 
-                      tokenize_model_path=tokenizer_model_path,
-                      pos_model_path=pos_model_path,
-                      lemma_model_path=lemma_model_path,
-                      depparse_model_path=depparse_model_path,
-                      pos_pretrain_path=pretrain_path,
-                      depparse_pretrain_path=pretrain_path)
-
-# Example text
-text = "Եւ ելեալ գնաց ըստ սովորութեանն ի լեառն Ձիթենեաց. գնացին զհետ նորա եւ աշակերտքն:"
-doc = nlp(text)
-
-# Process and print the results in conll-u format
-for sentence in doc.sentences:
-    print(f"# text = {sentence.text}")
-    for word in sentence.words:
-        feats = word.feats if word.feats else '_'
-        conllu_line = f"{word.id}\t{word.text}\t{word.lemma}\t{word.upos}\t_\t{feats}\t{word.head}\t{word.deprel}\t_"
-        print(conllu_line)
-    print()
 ```
 
 ## Acknowledgements
